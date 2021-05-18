@@ -5,7 +5,6 @@
  #define BUTTON 7
  
 void setup() {
-  // put your setup code here, to run once:
 
   //declares elements 
   pinMode(BUTTON, INPUT); //set input
@@ -14,7 +13,12 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
-
+  if(digitalRead(BUTTON) == HIGH){
+      
+      digitalWrite(LED, HIGH); 
+      delay(1000);             
+      digitalWrite(LED, LOW);  
+  }
+  
 }
