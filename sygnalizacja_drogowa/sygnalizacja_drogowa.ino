@@ -1,14 +1,13 @@
-  #define westRED 1  //red
+  #define westBUTTON 13
+  #define eastBUTTON 3
+  
+  #define westRED 12  //red
+  #define westYELOW 11  //yelow
+  #define westGREEN 10  //green
+
   #define eastRED 2 //red
-
-  #define westYELOW 3  //yelow
-  #define eastYELOW 4  //yelow
-
-  #define westGREEN 5  //green
-  #define eastGREEN 6  //green
-
-  #define westBUTTON 1
-  #define eastBUTTON 2
+  #define eastYELOW 1  //yelow
+  #define eastGREEN 0  //green
 
 void setup() {
 
