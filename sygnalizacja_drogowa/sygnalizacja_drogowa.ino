@@ -1,21 +1,32 @@
+  #define westRED 1  //red
+  #define eastRED 2 //red
+
+  #define westYELOW 3  //yelow
+  #define eastYELOW 4  //yelow
+
+  #define westGREEN 5  //green
+  #define eastGREEN 6  //green
+
+  #define westBUTTON 1
+  #define eastBUTTON 2
+
 void setup() {
-  // put your setup code here, to run once:
 
-  #define LED1  //red
-  #define LED2 //red
+   pinMode(westBUTTON, INPUT); //set input
 
-  #define LED3  //yelow
-  #define LED4  //yelow
+   pinMode(eastBUTTON, INPUT);   
 
-  #define LED5  //green
-  #define LED6  //green
-
-  #define BUTTON1
-  #define BUTTON2   
+   pinMode(westRED, OUTPUT);
+   pinMode(eastRED, OUTPUT);
+   pinMode(westYELOW, OUTPUT);
+   pinMode(eastYELOW, OUTPUT);
+   pinMode(westGREEN, OUTPUT);
+   pinMode(eastGREEN, OUTPUT);  
   
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
+  
 
 }
