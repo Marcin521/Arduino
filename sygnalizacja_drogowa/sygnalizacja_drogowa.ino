@@ -24,8 +24,39 @@ void setup() {
   
 }
 
-void loop() {
+void loop(){
 
+  if(westBUTTON == HIGH){
+
+    pinMode(eastRED, HIGH);
+    delay(900);     
+   
+    pinMode(westRED, HIGH);
+    delay(200);     
+            
+    pinMode(westYELOW, HIGH);
+    delay(200);
+
+    pinMode(westGREEN, HIGH);
+    delay(500);    
+    
+  }
+  
+
+  if(eastBUTTON == HIGH){
+
+    pinMode(westRED, HIGH);
+    delay(900);   
+    
+    pinMode(eastRED, HIGH);
+    delay(100);     
+            
+    pinMode(eastYELOW, HIGH);
+    delay(200);
+
+    pinMode(eastGREEN, HIGH);
+    delay(500);    
+  } 
   
 
 }
