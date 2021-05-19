@@ -1,3 +1,7 @@
+/*
+ Początkowo system będzie dopuszczał ruch ze zachód na wschód
+*/
+
   #define westBUTTON 13
   #define eastBUTTON 3
   
@@ -9,54 +13,53 @@
   #define eastYELOW 1  //yelow
   #define eastGREEN 0  //green
 
+  boolean trafficEast = true;
+  int trafficTime = 6500;
+  int changeDelay = 1000;
+
 void setup() {
 
    pinMode(westBUTTON, INPUT); //set input
-
    pinMode(eastBUTTON, INPUT);   
 
    pinMode(westRED, OUTPUT);
-   pinMode(eastRED, OUTPUT);
    pinMode(westYELOW, OUTPUT);
+   pinMode(westGREEN, OUTPUT);   
+   pinMode(eastRED, OUTPUT);
    pinMode(eastYELOW, OUTPUT);
-   pinMode(westGREEN, OUTPUT);
-   pinMode(eastGREEN, OUTPUT);  
-  
-}
+   pinMode(eastGREEN, OUTPUT);
+
+} 
 
 void loop(){
 
-  if(westBUTTON == HIGH){
-
     pinMode(eastRED, HIGH);
-    delay(900);     
-   
     pinMode(westRED, HIGH);
-    delay(200);     
-            
-    pinMode(westYELOW, HIGH);
-    delay(200);
+   
 
-    pinMode(westGREEN, HIGH);
-    delay(500);    
+  if(digitalRead(eastBUTTON) == HIGH){ //check site of trafic     
+            
+    pinMode(eastYELOW, HIGH);
+    delay(changeDelay);
+    pinMode(eastYELOW, LOW);
+    delay(changeDelay);
+    pinMode(eastGREEN, HIGH);
+    delay(changeDelay);
+    pinMode(eastGREEN, LOW);    
+    
+    if(trafficEast != true){    
+            
+        pinMode(westYELOW, HIGH);
+        delay(changeDelay);
+
+        pinMode(westGREEN, HIGH);
+        delay(trafficTime);    
+    }
     
   }
   
 
-  if(eastBUTTON == HIGH){
 
-    pinMode(westRED, HIGH);
-    delay(900);   
-    
-    pinMode(eastRED, HIGH);
-    delay(100);     
-            
-    pinMode(eastYELOW, HIGH);
-    delay(200);
-
-    pinMode(eastGREEN, HIGH);
-    delay(500);    
-  } 
   
 
 }
