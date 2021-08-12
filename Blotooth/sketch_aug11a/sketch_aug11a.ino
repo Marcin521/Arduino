@@ -1,5 +1,5 @@
 int state;
-int led = 13;
+int led = 8;
 
 void setup() {
   Serial1.begin(9600);
@@ -12,7 +12,7 @@ void loop() {
   Serial.print("\n");
   delay(200);
   
-  if(state == '0'){
+  if(state == '1'){
      digitalWrite(led, HIGH); 
         delay(1000);
     }
